@@ -14,4 +14,5 @@ module.exports = {
   mysqlUsername: process.env.MY_SQL_USERNAME,
   mysqlPassword: process.env.MY_SQL_PASSWORD,
   mysqlDatabase: process.env.MY_SQL_DATABASE,
+  mysqlPort: process.env.MY_SQL_PORT,
 };

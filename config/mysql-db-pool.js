@@ -8,6 +8,7 @@ const pool = mysql.createPool({
   password: config.mysqlPassword,
   database: config.mysqlDatabase,
   debug: false,
+  port: config.mysqlPort,
 });
 
 const promisePool = pool.promise();

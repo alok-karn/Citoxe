@@ -11,7 +11,7 @@ const signToken = (id) => {
 };
 
 const createSendToken = (user, statusCode, res) => {
-  const token = signToken(user._id);
+  const token = signToken(user.id);
   const cookieOptions = {
     expiresIn: new Date(
       Date.now() + config.jwtCookieExpiresIn * 24 * 60 * 60 * 1000
@@ -71,7 +71,7 @@ exports.login = async (req, res, next) => {
     if (!users || !(await bcrypt.compare(password, pwd)))
       return res.status(401).json({
         status: false,
-        message: 'Invaid User Credentials',
+        message: 'Invalid User Credentials',
       });
 
     createSendToken(users[0], 200, res);
