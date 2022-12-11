@@ -8,8 +8,8 @@ const router = express.Router();
 
 // router.use(authController.isLoggedIn);
 
-// router.get('/', viewsController.getOverview);
+router.get('/', viewsController.getHomepage);
 // router.get('/product/:title', viewsController.getTour);
-router.get('/', viewsController.getLoginForm);
+router.get('/login', viewsController.getLoginForm);
 
 module.exports = router;
