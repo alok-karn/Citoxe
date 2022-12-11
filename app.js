@@ -2,7 +2,8 @@ const express = require('express');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const xss = require('xss-clean');
-const hpp = require('hpp');
+// const hpp = require('hpp');
+const userRouter = require('./routers/userRoutes');
 
 const app = express();
 
@@ -25,5 +26,7 @@ app.use(express.json({ limit: '10kb' }));
 
 // Data Sanitization against XSS
 app.use(xss());
+
+app.use('/api/users', userRouter);
 
 module.exports = app;
