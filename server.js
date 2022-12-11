@@ -8,10 +8,6 @@ process.on('uncaughtException', (err) => {
 
 const app = require('./app');
 
-app.get('/', (req, res) => {
-  res.status(200).json({ status: true });
-});
-
 app.listen(config.port, () =>
   console.log(`Server is running on PORT ${config.port}`)
 );
