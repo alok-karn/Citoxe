@@ -4,6 +4,7 @@ const rateLimit = require('express-rate-limit');
 const xss = require('xss-clean');
 // const hpp = require('hpp');
 const userRouter = require('./routers/userRoutes');
+const productRouter = require('./routers/productRoutes');
 
 const app = express();
 
@@ -28,5 +29,6 @@ app.use(express.json({ limit: '10kb' }));
 app.use(xss());
 
 app.use('/api/users', userRouter);
+app.use('/api/products', productRouter);
 
 module.exports = app;

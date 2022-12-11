@@ -1,3 +1,4 @@
+const { promisify } = require('util');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
@@ -101,4 +102,53 @@ exports.login = async (req, res, next) => {
       message: 'Something went wrong, please try again later',
     });
   }
+};
+
+exports.protect = async (req, res, next) => {
+  let token;
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith('Bearer')
+  ) {
+    token = req.headers.authorization.split(' ')[1];
+  }
+
+  if (!token)
+    return res.status(401).json({
+      status: false,
+      message: 'Access denied. Please login to get access',
+    });
+
+  const decoded = await promisify(jwt.verify)(token, config.jwtSecret);
+
+  const freshUser = await MySqlHelper.query(
+    'SELECT * FROM users WHERE id = ?',
+    [decoded.id]
+  );
+
+  if (freshUser && freshUser.length === 0)
+    return res.status(401).json({
+      status: false,
+      message: 'The user belonging to this token no longer exists',
+    });
+
+  // if (freshUser.changedPasswordAfter(decoded.iat))
+  //   return next(
+  //     new AppError('You recently changed password. Please login again')
+  //   );
+
+  req.user = freshUser[0];
+  next();
+};
+
+exports.restrictTo = (...roles) => {
+  return (req, res, next) => {
+    if (!roles.includes(req.user.role))
+      res.status(403).json({
+        status: false,
+        message: 'You do not have permission to perform this action',
+      });
+
+    next();
+  };
 };
