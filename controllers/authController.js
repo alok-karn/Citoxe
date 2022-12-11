@@ -105,7 +105,8 @@ exports.login = async (req, res, next) => {
 };
 
 exports.protect = async (req, res, next) => {
-  let token;
+  try {
+    let token;
   if (
     req.headers.authorization &&
     req.headers.authorization.startsWith('Bearer')
@@ -139,6 +140,12 @@ exports.protect = async (req, res, next) => {
 
   req.user = freshUser[0];
   next();
+  } catch ( ) {
+    return res.status(500).json({
+      status: false,
+      message: 'Access denied. Invalid token',
+    });
+  }
 };
 
 exports.restrictTo = (...roles) => {
