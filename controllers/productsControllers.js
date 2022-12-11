@@ -92,6 +92,41 @@ exports.getProduct = async (req, res, next) => {
   }
 };
 
+
+exports.getProductByTitle = async (req, res, next) => {
+  try {
+    const { title } = req.params;
+
+    if (!title)
+      return res.status(400).json({
+        status: false,
+        message: 'Invalid product Title',
+      });
+
+    const products = await MySqlHelper.query(
+      'SELECT * FROM plants WHERE title = ?',
+      [title]
+    );
+
+    if (products && products.length === 0)
+      return res.status(404).json({
+        status: false,
+        message: 'Invalid product Title',
+      });
+
+    res.status(200).json({
+      status: true,
+      message: 'Data sent successfully',
+      product: products[0],
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: false,
+      message: 'Something went wrong, please try again later',
+    });
+  }
+};
+
 exports.updateProduct = async (req, res, next) => {
   try {
     const { id } = req.params;

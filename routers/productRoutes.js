@@ -7,6 +7,7 @@ const router = express.Router();
 
 router.route('/').get(productsControllers.getAllProducts);
 router.route('/:id').get(productsControllers.getProduct);
+router.route('/title/:title').get(productsControllers.getProductByTitle);
 
 router.use(authController.protect);
 router.route('/').post(productsControllers.createProduct);
