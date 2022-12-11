@@ -140,7 +140,7 @@ exports.protect = async (req, res, next) => {
 
   req.user = freshUser[0];
   next();
-  } catch ( ) {
+  } catch (err) {
     return res.status(500).json({
       status: false,
       message: 'Access denied. Invalid token',
