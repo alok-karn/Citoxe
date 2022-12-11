@@ -36,11 +36,36 @@ const createSendToken = (user, statusCode, res) => {
 exports.signup = async (req, res, next) => {
   try {
     const { name, email, password, passwordConfirm } = req.body;
-    const newUser = await User.create({
-      name,
-      email,
-      password,
-      passwordConfirm,
+
+    if (!name || !email || !password || !passwordConfirm)
+      return res.status(400).json({
+        status: false,
+        message: 'Please enter your name, email, password and confirm password',
+      });
+
+    if (password !== passwordConfirm)
+      return res.status(400).json({
+        status: false,
+        message: 'Passwords do not match',
+      });
+
+    const users = await MySqlHelper.query(
+      'SELECT email FROM users WHERE email = ?',
+      [email]
+    );
+
+    if (users.length > 0)
+      return res.status(401).json({
+        status: false,
+        message: 'This email address is already registered',
+      });
+
+    let hashedPassword = await bcrypt.hash(password, 8);
+
+    const newUser = await MySqlHelper.query('INSERT INTO users SET ?', {
+      name: name,
+      email: email,
+      password: hashedPassword,
     });
 
     createSendToken(newUser, 201, res);
