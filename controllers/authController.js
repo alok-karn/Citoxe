@@ -10,8 +10,8 @@ const signToken = (id) => {
   });
 };
 
-const createSendToken = (user, statusCode, res) => {
-  const token = signToken(user.id);
+const createSendToken = (id, statusCode, res) => {
+  const token = signToken(id);
   const cookieOptions = {
     expiresIn: new Date(
       Date.now() + config.jwtCookieExpiresIn * 24 * 60 * 60 * 1000
@@ -22,14 +22,9 @@ const createSendToken = (user, statusCode, res) => {
   if (config.node_env === 'production') cookieOptions.secure = true;
   res.cookie('jwt', cookieOptions);
 
-  user.password = undefined;
-
   res.status(statusCode).json({
-    status: 'success',
+    status: true,
     token,
-    data: {
-      user,
-    },
   });
 };
 
@@ -68,7 +63,7 @@ exports.signup = async (req, res, next) => {
       password: hashedPassword,
     });
 
-    createSendToken(newUser, 201, res);
+    createSendToken(newUser.insertId, 201, res);
   } catch (error) {
     res.status(500).json({
       status: false,
@@ -99,7 +94,7 @@ exports.login = async (req, res, next) => {
         message: 'Invalid User Credentials',
       });
 
-    createSendToken(users[0], 200, res);
+    createSendToken(users[0].id, 200, res);
   } catch (error) {
     res.status(500).json({
       status: false,
