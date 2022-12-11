@@ -11888,7 +11888,7 @@ var login = /*#__PURE__*/function () {
             _context.next = 3;
             return (0, _axios.default)({
               method: 'POST',
-              url: 'http://127.0.0.1:8080/api/users/login',
+              url: 'http://localhost:8080/api/users/login',
               data: {
                 email: email,
                 password: password
@@ -12127,7 +12127,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33415" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51899" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

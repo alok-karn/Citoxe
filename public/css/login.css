@@ -20,7 +20,7 @@ body {
 .left-container {
   width: 45%;
   height: 100vh;
-  background: url("..//assets/login_plant.jpg");
+  background: url("/img/login_plant.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

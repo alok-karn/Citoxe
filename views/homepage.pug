@@ -1,4 +1,75 @@
-extends base
+doctype html
+html
+    head
+        block head
+            meta(charset='UTF-8')
+            meta(name='viewport' content='width=device-width, initial-scale=1.0')
+            link(rel="preconnect", href="https://fonts.googleapis.com")
+            link(rel="preconnect", href="https://fonts.gstatic.com")
+            link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap")
+            link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap")
+            
+            link(rel='stylesheet' href='/css/style.css')
+            //- link(rel='stylesheet' href='/css/login.css')
+            link(rel='shortcut icon' type='/image/png' href='img/favicon.png')
 
-block content
-  h1 Homepage content goes here
+            title Citoxe | #{title}
+    
+    body
+        .container
+        
+        //Header
+        <div class="sec-1">
+            <nav>
+                <svg class='logo'>
+                    <use href='/img/icons.svg#icon-logo' />
+                </svg>
+                <span>Citoxe</span>
+                <div class="menu">
+                    <ul class="menu-items">
+                        <li><a href="./index" class="link">Home</a></li>
+                        <li><a href="./shop" class="link" target="_blank">Shop</a></li>
+                        <li><a href="#" class="link">Plants Room</a></li>
+                        <li><a href="#sec-6" class="link">Care Point</a></li>
+                        <li><a href="#sec-4" class="link">Gifting</a></li>
+                        <li><a href="#sec-7" class="link">About Store</a></li>
+                    </ul>
+                </div>
+                <div class="user-act">
+                    <svg class='search'>
+                        <use href='/img/icons.svg#icon-search' />
+                    </svg>
+                    <a href="./cart">
+                        <svg class='cart'>
+                            <use href='/img/icons.svg#icon-logo' />
+                        </svg>
+                    </a>
+                    if user 
+                        <button>Logout</button>
+                    else
+                        <a href="./login" target="_blank">
+                            <svg class='user'>
+                                <use href='/img/icons.svg#icon-user' />
+                            </svg>
+                        </a>
+                    
+                    <svg class='menu-cta'>
+                        <use href='/img/icons.svg#icon-menu-cta' />
+                    </svg>
+                </div>
+            </nav>
+
+            <div class="content">
+                <h1>
+                    CITOXE
+                </h1>
+                <span class="tagline">
+                    Detoxify your Life
+                </span>
+            </div>
+        </div>        
+
+
+        
+        //- script(src='/js/index.js')
+        script(src='/js/bundle.js')
