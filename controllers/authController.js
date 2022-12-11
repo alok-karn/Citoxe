@@ -31,7 +31,7 @@ const createSendToken = (id, statusCode, res) => {
 
 exports.signup = async (req, res, next) => {
   try {
-    const { name, email, password, passwordConfirm } = req.body;
+    const { name, email, password, passwordConfirm, role } = req.body;
 
     if (!name || !email || !password || !passwordConfirm)
       return res.status(400).json({
@@ -62,6 +62,7 @@ exports.signup = async (req, res, next) => {
       name: name,
       email: email,
       password: hashedPassword,
+      role: role,
     });
 
     createSendToken(newUser.insertId, 201, res);
