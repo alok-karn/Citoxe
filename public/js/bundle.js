@@ -11988,7 +11988,7 @@ var register = /*#__PURE__*/function () {
             if (res.data.status) {
               (0, _alerts.showAlert)('success', 'User Registered Successfully');
               window.setTimeout(function () {
-                location.assign('/');
+                location.assign('/login');
               }, 1500);
             }
             _context.next = 10;

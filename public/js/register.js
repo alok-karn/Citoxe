@@ -12,7 +12,7 @@ export const register = async (formData) => {
     if (res.data.status) {
       showAlert('success', 'User Registered Successfully');
       window.setTimeout(() => {
-        location.assign('/');
+        location.assign('/login');
       }, 1500);
     }
   } catch (err) {
