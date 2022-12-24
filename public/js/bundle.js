@@ -11899,7 +11899,7 @@ var login = /*#__PURE__*/function () {
             if (res.data.status) {
               (0, _alerts.showAlert)('success', 'Logged in Successfully');
               window.setTimeout(function () {
-                location.assign('/');
+                location.assign('/shop');
               }, 1500);
             }
             _context.next = 10;
