@@ -11,5 +11,7 @@ const router = express.Router();
 router.get('/', viewsController.getHomepage);
 // router.get('/product/:title', viewsController.getTour);
 router.get('/login', viewsController.getLoginForm);
+router.get('/register', viewsController.getRegisterForm);
+
 
 module.exports = router;

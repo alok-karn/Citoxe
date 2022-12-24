@@ -4,57 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./scss/register.css">
+    <link rel="stylesheet" href="/css/register.css">
     <link rel="icon" href="../../assets/bg-removed/Screenshot_2022-06-12_145318-removebg-preview.png">
     <title>Register to citoxe </title>
 </head>
 <body>
     <div class="container">
         <div class="left-container">
-            <div class="upHeading">
-                CITOXE
-            </div>
+            <div class="upHeading">CITOXE </div>
             <div class="heading">
                 Create Account
             </div>
 
-            <form action="/auth/register" method="post">
-                <span class="up">
-                    Name*
-                </span>
+            <form method="post" class="form--register">
+                <span class="up"> Name*</span>
                 <div class="input-field">
-                    <input type="text" name="name" id="name" onkeyup = "validateName()" required>
+                    <input type="text" name="name" id="reg_name" required>
                 </div>
                 
                 
-                <span class="up">
-                    Email Address*
-                </span>
+                <span class="up">Email Address*</span>
                 <div class="input-field">
-                    <input type="text" name="email" id="email" onkeyup="checkEmail()" required>
+                    <input type="text" name="email" id="reg_email" required>
                 </div>
 
-                <span class="up">
-                    Password*
-                </span>
+                <span class="up">Password*</span>
                 <div class="input-field">
-                    <input type="password" name="password" id="password" onkeyup="checkPasswordLength()" required>
+                    <input type="password" name="password" id="reg_password"  required>
                 </div>
 
-                <span class="up">
-                    Confirm Password*
-                </span>
+                <span class="up">Confirm Password*</span>
                 <div class="input-field">
-                    <input type="password" name="password_confirm" id="password_confirm" onkeyup="validatePass()" required>
+                    <input type="password" name="password_confirm" id="reg_password_confirm" required>
                 </div>
 
                 <div class="button">
                     <button type="submit">Continue</button>
                 </div>
 
-                <p id="signin">
-                    Already have an account? <a href="/auth/login"> &nbsp;Sign in</a>
-                </p>
+                <p id="signin">Already have an account? <a href="/auth/login"> &nbsp;Sign in</a></p>
 
                 <p id="warning">
                 </p>
