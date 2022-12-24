@@ -11,6 +11,8 @@ const router = express.Router();
 router.get('/', viewsController.getHomepage);
 router.get('/login', viewsController.getLoginForm);
 router.get('/register', viewsController.getRegisterForm);
+router.get('/shop', viewsController.getShopPage);
+router.get('/cart', viewsController.getCartPage);
 
 
 module.exports = router;

@@ -17,3 +17,10 @@ exports.getRegisterForm = (req, res) => {
   res.status(200).render('register', { title: 'Register for a new Account' });
 };
 
+exports.getShopPage = (req, res) => {
+  res.status(200).render('shop', { title: 'Shop' });
+}
+
+exports.getCartPage = (req, res) => {
+  res.status(200).render('cart', { title: 'Add to Cart' });
+}

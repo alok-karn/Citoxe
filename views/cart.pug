@@ -1,0 +1,209 @@
+html
+    head
+        block head
+            meta(charset='UTF-8')
+            meta(name='viewport' content='width=device-width, initial-scale=1.0')
+            link(rel="preconnect", href="https://fonts.googleapis.com")
+            link(rel="preconnect", href="https://fonts.gstatic.com")
+            link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap")
+            link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap")
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+            link(rel='stylesheet' href='/css/cart.css')
+            //- link(rel='stylesheet' href='/css/login.css')
+            link(rel='shortcut icon' type='/image/png' href='img/favicon.png')
+
+            title Citoxe | #{title}
+    
+    body
+        <nav class="navMenu">
+            <div class="menu">
+            <a href="#">Home</a>
+            <a href="./shop">Shop</a>
+            <a href="./cart">Cart</a>
+            <a href="#">Users</a>
+            <div class="dot"></div>
+            </div>
+            <button>Log Out 
+
+                <svg viewBox="0 0 89 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M44.5 8.34375C36.0589 8.34375 28.9639 13.8089 26.0742 21.207L31.2028 23.293C33.311 17.8946 38.4814 13.9062 44.5 13.9062C52.1596 13.9062 58.4062 20.1529 58.4062 27.8125V31.6367C54.2983 29.2448 49.573 27.8125 44.5 27.8125C29.1697 27.8125 16.6875 40.2947 16.6875 55.625C16.6875 70.9553 29.1697 83.4375 44.5 83.4375C59.8303 83.4375 72.3125 70.9553 72.3125 55.625C72.3111 51.9328 71.5723 48.278 70.1395 44.8752C68.7067 41.4723 66.6088 38.3898 63.9688 35.8086V27.8125C63.9688 17.1214 55.1911 8.34375 44.5 8.34375ZM44.5 33.375C56.8209 33.375 66.75 43.3041 66.75 55.625C66.75 67.9459 56.8209 77.875 44.5 77.875C32.1791 77.875 22.25 67.9459 22.25 55.625C22.25 43.3041 32.1791 33.375 44.5 33.375ZM44.5 50.0625C43.0247 50.0625 41.6099 50.6485 40.5667 51.6917C39.5235 52.7349 38.9375 54.1497 38.9375 55.625C38.9375 57.6776 40.0556 59.4381 41.7188 60.406V69.5312H47.2812V60.406C48.9444 59.4381 50.0625 57.6803 50.0625 55.625C50.0625 54.1497 49.4765 52.7349 48.4333 51.6917C47.3901 50.6485 45.9753 50.0625 44.5 50.0625V50.0625Z" fill="white"/>
+                    </svg>
+                    
+
+            </button>
+        </nav>
+
+        <section class="h-100 gradient-custom">
+            <div class="container py-5">
+            <div class="row d-flex justify-content-center my-4">
+                <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-header py-3">
+                    <h5 class="mb-0">Cart - 2 items</h5>
+                    </div>
+                    <div class="card-body">
+                    <!-- Single item -->
+                    <div class="row">
+                        <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                        <!-- Image -->
+                        <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                            <img src="/img/assets/orginals/andrew-reshetov-tXGOhiGBu5I-unsplash.jpg" class="w-100" alt="Spineless yucca" />
+                            <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                            </a>
+                        </div>
+                        <!-- Image -->
+                        </div>
+        
+                        <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                        <!-- Data -->
+                        <p><strong><u><em>Spineless yucca</em></u></strong></p>
+                        <p><b>Description</b>: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis vero maxime vitae quis quaerat.</p>
+                        <p><b>Allergy</b>: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, recusandae?</p>
+                        <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="Remove item">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip" title="Move to the wish list">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <!-- Data -->
+                        </div>
+        
+                        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                        <!-- Quantity -->
+                        <div class="d-flex mb-4" style="max-width: 300px">
+                            <button class="btn btn-primary px-3 me-2" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus"></i>
+                            </button>
+        
+                            <div class="form-outline">
+                            <input id="form1" min="0" name="quantity" value="1" type="number" class="form-control" />
+                            <label class="form-label" for="form1">Quantity</label>
+                            </div>
+        
+                            <button class="btn btn-primary px-3 ms-2" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <!-- Quantity -->
+        
+                        <!-- Price -->
+                        <p class="text-start text-md-center">
+                            <strong>$40</strong>
+                        </p>
+                        <!-- Price -->
+                        </div>
+                    </div>
+                    <!-- Single item -->
+        
+                    <hr class="my-4" />
+        
+                    <!-- Single item -->
+                    <div class="row">
+                        <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                        <!-- Image -->
+                        <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                            <img src="/img/assets/orginals/stephanie-harvey-T0inbt7nRME-unsplash.jpg" alt="Aloe vera" class="w-100" />
+                            <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                            </a>
+                        </div>
+                        <!-- Image -->
+                        </div>
+        
+                        <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                        <!-- Data -->
+                        <p><strong><u><em>Aloe vera</em></u></strong></p>
+                        <p><b>Description</b>: Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, laudantium.</p>
+                        <p><b>Allergy</b>: Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nostrum dolore assumenda impedit porro?</p>
+        
+                        <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="Remove item">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip"  title="Move to the wish list">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <!-- Data -->
+                        </div>
+        
+                        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                        <!-- Quantity -->
+                        <div class="d-flex mb-4" style="max-width: 300px">
+                            <button class="btn btn-primary px-3 me-2" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus"></i>
+                            </button>
+        
+                            <div class="form-outline">
+                            <input id="form1" min="0" name="quantity" value="1" type="number" class="form-control" />
+                            <label class="form-label" for="form1">Quantity</label>
+                            </div>
+        
+                            <button class="btn btn-primary px-3 ms-2" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <!-- Quantity -->
+        
+                        <!-- Price -->
+                        <p class="text-start text-md-center">
+                            <strong>$15</strong>
+                        </p>
+                        <!-- Price -->
+                        </div>
+                    </div>
+                    <!-- Single item -->
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                    <p><strong>Expected shipping delivery</strong></p>
+                    <p class="mb-0">25.12.2022 - 27.12.2022</p>
+                    </div>
+                </div>
+                <div class="card mb-4 mb-lg-0">
+                    <div class="card-body">
+                    <p><strong>We accept</strong></p>
+                    <img class="me-2" width="45px" src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg" alt="Visa" />
+                    <img class="me-2" width="45px" src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg" alt="American Express" />
+                    <img class="me-2" width="45px"  src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg" alt="Mastercard" />
+                    <img class="me-2" width="45px" src="./paypal-color-icon.svg" alt="PayPal acceptance mark" />
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-header py-3">
+                    <h5 class="mb-0">Summary</h5>
+                    </div>
+                    <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0"> Products
+                        <span>$55</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center px-0"> Shipping
+                        <span>Gratis</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                        <div>
+                            <strong>Total amount</strong>
+                            <strong>
+                            <p class="mb-0">(including VAT)</p>
+                            </strong>
+                        </div>
+                        <span><strong>$62.15</strong></span>
+                        </li>
+                    </ul>
+        
+                    <button type="button" class="btn btn-primary btn-lg btn-block"> Go to checkout
+                    </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    script(src='/js/bundle.js')
