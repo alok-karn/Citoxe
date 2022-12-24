@@ -5,7 +5,7 @@ exports.getHomepage = async (req, res, next) => {
 
   res
     .status(200)
-    .render('homepage', { title: 'All Plants', products: allProducts });
+    .render('homepage', { title: 'Home Page', products: allProducts });
 };
 
 
