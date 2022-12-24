@@ -41,7 +41,7 @@ body {
   height: 60vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(rgb(209, 209, 209), rgba(75, 131, 79, 0.7)), url(https://c0.wallpaperflare.com/preview/773/289/258/plant-leaf-overgrown-wall.jpg);
+  background: linear-gradient(rgb(209, 209, 209), rgba(75, 131, 79, 0.7)), url(/img/plant-leaf-overgrown-wall.jpg);
   background-size: cover;
 }
 .sec-1 nav {
@@ -72,7 +72,7 @@ body {
 .sec-1 nav .menu-items {
   position: relative;
   margin-top: 1.5em;
-  margin-left: -28em;
+  margin-left: -20em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -160,13 +160,15 @@ body {
   opacity: 0;
 }
 .sec-1 .content h1 {
+  color: white;
   margin-top: 1em;
   font-size: 9.5em;
-  background-image: url(https://images.unsplash.com/photo-1610831006059-14fe16fe7ac4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM3fHxmbG93ZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60);
+  background: url('/img/main-title.png') no-repeat;
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
+  
 }
 .sec-1 .content h1:hover {
   cursor: pointer;
@@ -384,7 +386,7 @@ body {
 .sec-3 .product-card .card-1 .card-container-1 .top-1, .sec-3 .product-card .card-1 .card-container-2 .top-1, .sec-3 .product-card .card-1 .card-container-3 .top-1, .sec-3 .product-card .card-1 .card-container-4 .top-1, .sec-3 .product-card .card-2 .card-container-1 .top-1, .sec-3 .product-card .card-2 .card-container-2 .top-1, .sec-3 .product-card .card-2 .card-container-3 .top-1, .sec-3 .product-card .card-2 .card-container-4 .top-1, .sec-3 .product-card .card-3 .card-container-1 .top-1, .sec-3 .product-card .card-3 .card-container-2 .top-1, .sec-3 .product-card .card-3 .card-container-3 .top-1, .sec-3 .product-card .card-3 .card-container-4 .top-1, .sec-3 .product-card .card-4 .card-container-1 .top-1, .sec-3 .product-card .card-4 .card-container-2 .top-1, .sec-3 .product-card .card-4 .card-container-3 .top-1, .sec-3 .product-card .card-4 .card-container-4 .top-1 {
   height: 80%;
   width: 100%;
-  background: url(../assets/orginals/andrew-reshetov-tXGOhiGBu5I-unsplash.jpg) no-repeat center center;
+  background: url(/img/assets/orginals/andrew-reshetov-tXGOhiGBu5I-unsplash.jpg) no-repeat center center;
   background-size: cover;
 }
 .sec-3 .product-card .card-1 .card-container-1 .bottom, .sec-3 .product-card .card-1 .card-container-2 .bottom, .sec-3 .product-card .card-1 .card-container-3 .bottom, .sec-3 .product-card .card-1 .card-container-4 .bottom, .sec-3 .product-card .card-2 .card-container-1 .bottom, .sec-3 .product-card .card-2 .card-container-2 .bottom, .sec-3 .product-card .card-2 .card-container-3 .bottom, .sec-3 .product-card .card-2 .card-container-4 .bottom, .sec-3 .product-card .card-3 .card-container-1 .bottom, .sec-3 .product-card .card-3 .card-container-2 .bottom, .sec-3 .product-card .card-3 .card-container-3 .bottom, .sec-3 .product-card .card-3 .card-container-4 .bottom, .sec-3 .product-card .card-4 .card-container-1 .bottom, .sec-3 .product-card .card-4 .card-container-2 .bottom, .sec-3 .product-card .card-4 .card-container-3 .bottom, .sec-3 .product-card .card-4 .card-container-4 .bottom {
@@ -543,21 +545,21 @@ body {
 .card-container-2 .top-2 {
   height: 80%;
   width: 100%;
-  background: url(../assets/orginals/galina-n-miziNqvJx5M-unsplash.jpg) no-repeat center center;
+  background: url(/img/assets/orginals/galina-n-miziNqvJx5M-unsplash.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .card-container-3 .top-3 {
   height: 80%;
   width: 100%;
-  background: url(../assets/orginals/stephanie-harvey-T0inbt7nRME-unsplash.jpg) no-repeat center center;
+  background: url(/img/assets/orginals/stephanie-harvey-T0inbt7nRME-unsplash.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .card-container-4 .top-4 {
   height: 80%;
   width: 100%;
-  background: url(../assets/orginals/zobia-shakar-Qtso7p2tOI4-unsplash.jpg) no-repeat center center;
+  background: url(/img/assets/orginals/zobia-shakar-Qtso7p2tOI4-unsplash.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -669,7 +671,7 @@ body {
   box-sizing: 5px 20px 30px rgba(58, 58, 58, 0.5);
 }
 .sec-4 .gift-card .gift-box1 {
-  background: url("../assets/images/gifiting5.jpg") no-repeat no-repeat;
+  background: url("/img/assets/images/gifiting5.jpg") no-repeat no-repeat;
   background-size: 100%;
 }
 .sec-4 .gift-card .gift-box1::after {
@@ -687,7 +689,7 @@ body {
   border-radius: 6px 0 0 6px;
 }
 .sec-4 .gift-card .gift-box2 {
-  background: url("../assets/images/gifting2.jpg") no-repeat;
+  background: url("/img/assets/images/gifting2.jpg") no-repeat;
   background-size: cover;
 }
 .sec-4 .gift-card .gift-box2::after {
@@ -705,7 +707,7 @@ body {
   border-radius: 6px 0 0 6px;
 }
 .sec-4 .gift-card .gift-box3 {
-  background: url("../assets/images/gifting3.jpg") no-repeat no-repeat;
+  background: url("/img/assets/images/gifting3.jpg") no-repeat no-repeat;
   background-size: 100%;
 }
 .sec-4 .gift-card .gift-box3::after {
@@ -723,7 +725,7 @@ body {
   border-radius: 0px 6px 6px 0px;
 }
 .sec-4 .gift-card .gift-box4 {
-  background: url("../assets/images/gifting4.jpg") no-repeat no-repeat;
+  background: url("/img/assets/images/gifting4.jpg") no-repeat no-repeat;
   background-size: cover;
   box-shadow: 0px 0px 0px rgba(167, 167, 167, 0.2);
 }
@@ -756,7 +758,7 @@ body {
   margin-top: -5em;
   width: 18em;
   height: 24em;
-  background: url(https://images.unsplash.com/photo-1615309363679-fed456ff8113?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGxhbnQlMjBkZWNvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60) no-repeat no-repeat;
+  background: url(/img/sec-5_image_2.png) no-repeat no-repeat;
   background-size: cover;
   background-position: center -65px;
 }
@@ -767,7 +769,7 @@ body {
   height: 16.5em;
   top: 15em;
   left: 12em;
-  background: url(https://images.unsplash.com/photo-1603204077779-bed963ea7d0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fHBsYW50JTIwZGVjb3J8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60) no-repeat no-repeat;
+  background: url(/img/sec-5_image_1.png) no-repeat no-repeat;
   background-size: cover;
   box-shadow: -10px 0px 70px rgba(0, 0, 0, 0.5);
 }
@@ -812,7 +814,7 @@ body {
   height: 16em;
   top: 8em;
   position: absolute;
-  background: url("./../assets/bg-removed/palm-leaf.png") no-repeat no-repeat;
+  background: url("/img/assets/bg-removed/palm-leaf.png") no-repeat no-repeat;
   background-size: auto;
   background-position-x: -50px;
 }
@@ -825,7 +827,7 @@ body {
   background-color: #c1dbc7;
   display: flex;
   justify-content: flex-end;
-  background: url(".././assets/orginals/9k.png") no-repeat no-repeat;
+  background: url("/img/assets/orginals/9k.png") no-repeat no-repeat;
   background-size: cover;
 }
 .sec-6 .care-box {
@@ -865,7 +867,7 @@ body {
   margin: auto;
   width: 250px;
   height: 120px;
-  background: url("../assets/icons/plant (1).png") no-repeat no-repeat;
+  background: url("/img/assets/icons/plant (1).png") no-repeat no-repeat;
   background-size: contain;
   background-position: center;
 }
@@ -893,7 +895,7 @@ body {
 .sec-6 .care-box .care-sub-box .sub-box-2 .image {
   width: 150px;
   height: 90px;
-  background: url("../assets/icons/plants.png") no-repeat no-repeat;
+  background: url("/img/assets/icons/plants.png") no-repeat no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -904,7 +906,7 @@ body {
 .sec-6 .care-box .care-sub-box .sub-box-3 .image {
   width: 200px;
   height: 90px;
-  background: url("../assets/icons/plant-pot.png") no-repeat no-repeat;
+  background: url("/img/assets/icons/plant-pot.png") no-repeat no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -915,7 +917,7 @@ body {
 .sec-6 .care-box .care-sub-box .sub-box-4 .image {
   width: 200px;
   height: 90px;
-  background: url("../assets/icons/plant.png") no-repeat no-repeat;
+  background: url("/img/assets/icons/plant.png") no-repeat no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -927,7 +929,7 @@ body {
   height: 20em;
   top: 4.1em;
   right: 62em;
-  background: url("../assets/bg-removed/monstera.png") no-repeat no-repeat;
+  background: url("/img/assets/bg-removed/monstera.png") no-repeat no-repeat;
   background-size: contain;
 }
 
@@ -962,7 +964,7 @@ body {
   margin-right: 5.5em;
   width: 30em;
   height: 25em;
-  background: url(https://images.unsplash.com/photo-1555955208-94f6fafea771?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z2FyZGVuaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60) no-repeat no-repeat;
+  background: url(/img/sec-7_image.png) no-repeat no-repeat;
   background-size: cover;
   box-shadow: 45px 40px 1px rgb(26, 65, 15);
 }
@@ -1045,18 +1047,13 @@ footer .social .fbb:hover, footer .social .tww:hover, footer .social .ytt:hover,
   cursor: pointer;
   transform: scale(0.95);
 }
+.align{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 ::-webkit-scrollbar {
-  width: 14px;
+  display: none;
 }
-
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 12px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgb(68, 107, 68);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 20%, transparent 20%, transparent 40%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.3) 60%, transparent 60%, transparent 80%, rgba(255, 255, 255, 0.3) 80%);
-  border-radius: 10px;
-}/*# sourceMappingURL=style.css.map */
