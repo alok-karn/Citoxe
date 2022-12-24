@@ -132,7 +132,7 @@ body {
   width: 50%;
   height: 100vh;
   padding: 0 4em 0 2em;
-  background: url(https://i.pinimg.com/564x/47/40/a5/4740a5c90999bdf2325b93b52fbbc8a5.jpg);
+  background: url('/img/register_plant.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
